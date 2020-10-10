@@ -28,4 +28,23 @@ $(function () {
         })
         this.reset()
     })
+
+    // --------------------------注册功能--------------------------------
+    $('.register-box form').on('submit', function (e) {
+        e.preventDefault()
+        let data = $(this).serialize()
+        $.ajax({
+            type: 'POST',
+            url: '/api/reguser',
+            data,
+            success: res => {
+                layer.msg(res.message)
+                if (res.status === 0) {
+                    $('.register-box').hide()
+                    $('.login-box').show() 
+                }
+            }
+        })
+        this.reset()
+    })
 })
