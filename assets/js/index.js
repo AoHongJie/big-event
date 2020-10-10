@@ -5,7 +5,16 @@ $(function () {
                 url: '/my/userinfo',
                 headers: { Authorization: localStorage.getItem('token') },
                 success: res => {
-                    renderAvatar(res.data)
+                    if (res.status === 0) {
+                        renderAvatar(res.data)
+                    }
+                },
+                complete: xhr => {
+                    if (xhr.responseJSON && xhr.responseJSON.status === 1) {
+                        localStorage.removeItem('token')
+                        location.href = 'login.html'
+                        console.log(1)
+                    }
                 }
             })
     }
@@ -19,4 +28,11 @@ $(function () {
         }
     }
     getUserinfo()
+    // --------------------注销功能--------------------
+    $('#logout').on('click', function () {
+        // 删除token
+        localStorage.removeItem('token')
+        // 跳转到index页面
+        location.href = 'login.html'
+    })
 })

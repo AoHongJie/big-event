@@ -1,3 +1,10 @@
+<script>
+    // 判断是否有token
+    if (localStorage.getItem('token') === null) {
+        location.href = 'login.html'
+    }
+</script>
+
 <!DOCTYPE html>
 <html>
 
@@ -28,7 +35,8 @@
                         <dd><a href="">重置密码</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href="javascript:;"><i class="iconfont icon-tuichu"></i>退出</a></li>
+                <li class="layui-nav-item"><a href="javascript:;" id="logout"><i class="iconfont icon-tuichu"></i>退出</a>
+                </li>
             </ul>
         </div>
 
