@@ -11,8 +11,8 @@ body {
 }
 
 .loginAndRegBox {
-    width: 410px;
-    height: 300px;
+    width: 400px;
+    height: 310px;
     background-color: #fff;
     position: absolute;
     left: 50%;
@@ -20,7 +20,38 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.loginAndRegBox a {
+    font-size: 14px;
+}
+
 .title-box {
     height: 60px;
     background: url("../images/login_title.png") no-repeat center;
+}
+
+.layui-form {
+    margin: 0 30px;
+}
+
+.link_register,
+.link_login {
+    text-align: right;
+}
+
+.register-box {
+    display: none;
+}
+
+.layui-form-item {
+    position: relative;
+}
+
+.layui-icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.layui-input {
+    padding-left: 35px;
 }
