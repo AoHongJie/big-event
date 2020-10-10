@@ -1,0 +1,26 @@
+.iconfont,
+.layui-icon {
+    padding-right: 10px;
+}
+
+.userinfo {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.text-avatar {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    border-radius: 50%;
+    background-color: #009688;
+}
+
+.text-avatar,
+.layui-nav-img {
+    display: none;
+}
