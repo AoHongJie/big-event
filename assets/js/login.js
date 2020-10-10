@@ -57,4 +57,5 @@ $(function () {
             if(val !== $('.pwd').val()) return '两次密码不一致'
         }
     })
+
 })
