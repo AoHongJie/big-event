@@ -47,4 +47,13 @@ $(function () {
         })
         this.reset()
     })
+
+    // ---------------------表单验证----------------------
+    let form = layui.form;
+    form.verify({
+        pass: [/^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格'],
+        length: function (val) {
+            if(val !== $('.pwd').val()) return '两次密码不一致'
+        }
+    })
 })
