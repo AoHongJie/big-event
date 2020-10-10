@@ -20,6 +20,7 @@ $(function () {
             data,
             success: res => {
                 if (res.status === 0) {
+                    localStorage.setItem('token',res.token)
                     location.href = 'index.html'
                 } else {
                     layer.msg('用户名或密码错误');
