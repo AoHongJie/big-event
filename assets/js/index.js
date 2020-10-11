@@ -8,13 +8,7 @@ $(function () {
                         renderAvatar(res.data)
                     }
                 },
-                complete: xhr => {
-                    if (xhr.responseJSON && xhr.responseJSON.status === 1) {
-                        localStorage.removeItem('token')
-                        location.href = 'login.html'
-                        console.log(1)
-                    }
-                }
+                
             })
     }
     function renderAvatar(data) { // 判断用户是否设置头像和昵称,没有就渲染文字头像和用户名
