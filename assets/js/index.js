@@ -30,9 +30,13 @@ $(function () {
     getUserinfo()
     // --------------------注销功能--------------------
     $('#logout').on('click', function () {
-        // 删除token
-        localStorage.removeItem('token')
-        // 跳转到index页面
-        location.href = 'login.html'
+        layer.confirm('确定退出吗?', {icon: 3, title:'提示'}, function(index){
+            // 删除token
+            localStorage.removeItem('token')
+            // 跳转到index页面
+            location.href = 'login.html'
+            layer.close(index);
+          });
+        
     })
 })
