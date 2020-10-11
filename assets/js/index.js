@@ -3,7 +3,6 @@ $(function () {
     function getUserinfo() { // 获取用户信息
             $.ajax({
                 url: '/my/userinfo',
-                headers: { Authorization: localStorage.getItem('token') },
                 success: res => {
                     if (res.status === 0) {
                         renderAvatar(res.data)
