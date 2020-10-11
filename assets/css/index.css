@@ -11,6 +11,10 @@ a {
     padding-right: 10px;
 }
 
+.layui-icon {
+    padding-left: 20px;
+}
+
 .userinfo {
     height: 60px;
     line-height: 60px;
