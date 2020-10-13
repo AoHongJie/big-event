@@ -14,3 +14,7 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+.layui-form {
+    padding-top: 20px;
+}
