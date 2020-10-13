@@ -7,7 +7,7 @@ $(function () {
             }
         }
     })
-    function rendersFrom() { // 向填入数据
+    function rendersFrom() { // 数据回填
         $.ajax({
             url: '/my/userinfo',
                 success: res => {
